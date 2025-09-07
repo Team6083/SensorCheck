@@ -7,6 +7,7 @@ package frc.robot;
 import com.revrobotics.Rev2mDistanceSensor.Port;
 import com.studica.frc.AHRS;
 
+import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -27,6 +28,7 @@ public class Robot extends TimedRobot {
    * initialization code.
    */
   AHRS navX_SPI = new AHRS(AHRS.NavXComType.kMXP_SPI);
+  ADXRS450_Gyro adxrs450_Gyro = new ADXRS450_Gyro();
 
   Encoder encoder_0_1 = new Encoder(0, 1);
   Encoder encoder_2_3 = new Encoder(2, 3);
@@ -80,6 +82,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     SmartDashboard.putNumber("NavX_SPI Angle", navX_SPI.getAngle());
+    SmartDashboard.putNumber("ADXRS450_Gyro Angle", adxrs450_Gyro.getAngle());
 
     SmartDashboard.putNumber("Encoder_0-1", encoder_0_1.get());
     SmartDashboard.putNumber("Encoder_2-3", encoder_2_3.get());
