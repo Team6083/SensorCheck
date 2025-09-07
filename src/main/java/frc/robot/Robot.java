@@ -7,6 +7,7 @@ package frc.robot;
 import com.revrobotics.Rev2mDistanceSensor.Port;
 import com.studica.frc.AHRS;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
@@ -69,6 +70,8 @@ public class Robot extends TimedRobot {
 
   public Robot() {
     rev2mDistanceSensor.setAutomaticMode(true);
+
+    CameraServer.startAutomaticCapture();
   }
 
   @Override
