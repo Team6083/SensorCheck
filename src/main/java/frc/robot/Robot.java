@@ -78,7 +78,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     SmartDashboard.putNumber("NavX_SPI Angle", navX_SPI.getAngle());
-    SmartDashboard.putNumber("ADXRS450_Gyro Angle", adxrs450_Gyro.getAngle());
+    SmartDashboard.putNumber("ADXRS450Gyro Angle", adxrs450_Gyro.getAngle());
 
     SmartDashboard.putNumber("Encoder_0-1", encoder_0_1.get());
     SmartDashboard.putNumber("Encoder_2-3", encoder_2_3.get());
