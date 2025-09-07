@@ -8,6 +8,7 @@ import com.revrobotics.Rev2mDistanceSensor.Port;
 import com.studica.frc.AHRS;
 
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -54,6 +55,17 @@ public class Robot extends TimedRobot {
   DutyCycleEncoder dutyCycleEncoder_10 = new DutyCycleEncoder(10);
 
   Rev2mDistanceSensor rev2mDistanceSensor = new Rev2mDistanceSensor(Port.kOnboard);
+
+  DigitalInput DigitalInput_0 = new DigitalInput(0);
+  DigitalInput DigitalInput_1 = new DigitalInput(1);
+  DigitalInput DigitalInput_2 = new DigitalInput(2);
+  DigitalInput DigitalInput_3 = new DigitalInput(3);
+  DigitalInput DigitalInput_4 = new DigitalInput(4);
+  DigitalInput DigitalInput_5 = new DigitalInput(5);
+  DigitalInput DigitalInput_6 = new DigitalInput(6);
+  DigitalInput DigitalInput_7 = new DigitalInput(7);
+  DigitalInput DigitalInput_8 = new DigitalInput(8);
+  DigitalInput DigitalInput_9 = new DigitalInput(9);
 
   public Robot() {
     rev2mDistanceSensor.setAutomaticMode(true);
@@ -104,6 +116,17 @@ public class Robot extends TimedRobot {
     SmartDashboard.putNumber("Encoder_10", dutyCycleEncoder_10.get());
 
     SmartDashboard.putNumber("Rev2mDistanceSensor", rev2mDistanceSensor.getDistance());
+
+    SmartDashboard.putBoolean("DigitalInput_0", DigitalInput_0.get());
+    SmartDashboard.putBoolean("DigitalInput_1", DigitalInput_1.get());
+    SmartDashboard.putBoolean("DigitalInput_2", DigitalInput_2.get());
+    SmartDashboard.putBoolean("DigitalInput_3", DigitalInput_3.get());
+    SmartDashboard.putBoolean("DigitalInput_4", DigitalInput_4.get());
+    SmartDashboard.putBoolean("DigitalInput_5", DigitalInput_5.get());
+    SmartDashboard.putBoolean("DigitalInput_6", DigitalInput_6.get());
+    SmartDashboard.putBoolean("DigitalInput_7", DigitalInput_7.get());
+    SmartDashboard.putBoolean("DigitalInput_8", DigitalInput_8.get());
+    SmartDashboard.putBoolean("DigitalInput_9", DigitalInput_9.get());
   }
 
   @Override
